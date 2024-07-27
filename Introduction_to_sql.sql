@@ -17,7 +17,7 @@ CREATE TABLE employee(
     lastName VARCHAR(20) NOT NULL,
     salary INT NOT NULL DEFAULT 100000,
     age INT NOT NULL,
-    location INT NOT NULL,
+    location VARCHAR(50) NOT NULL,
 	PRIMARY KEY (empId) 
 );
 
@@ -37,16 +37,18 @@ varchar(any_lenght) => for string characters
  what constraint table do has. */
  DESC employee;
 
+Drop Table employee;
+
 -- Insertion of data
 INSERT INTO employee VALUES (1, "Sanaullah", "Saeed", 10, 21, 13);
-INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Abdullah", "A.", 4200140, 14, 27);
-INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Ayush", "Raj", 1000000, 34, 22);
-INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Ashish", "Shah", 34000, 18, 24);
-INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Ayush", "Topper", 4200140, 14, 27);
-INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Vijay", "Ganesh", 540004, 54, 12);
-INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Divyanshu", "Chutiya", 214000, 87, 25);
-INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Abhay", "Sharma", 2404400, 32, 7);
-INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Deepak", "Sharma", 100002, 32, 7);
+INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Abdullah", "A.", 4200140, 14, 'Islamabad');
+INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Ayush", "Raj", 1000000, 34, 'Karachi');
+INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Ashish", "Shah", 34000, 18, 'Karachi');
+INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Ayush", "Topper", 4200140, 14, 'Lahore');
+INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Vijay", "Ganesh", 540004, 54, 'Karachi');
+INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Divyanshu", "Chutiya", 214000, 87, 'Lahore');
+INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Abhay", "Sharma", 2404400, 32, 'Isalamabd');
+INSERT INTO employee (firstName, lastName, salary, age, location) VALUES ("Deepak", "Sharma", 100002, 32, 'Lahore');
 
 -- Selection of data
 SELECT FIRSTNAME FROM EMPLOYEE;
